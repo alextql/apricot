@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - 公开 Mock Server
  - 搜索
 
+## [0.2.0] - 2021-03-09
+### Added
+- goreleaser
+
 ## [0.1.0] - 2021-03-09
 ### Added
 - 长期有效的短链接生成
