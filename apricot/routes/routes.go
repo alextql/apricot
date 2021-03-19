@@ -22,4 +22,11 @@ func (r *Route) Register() {
 		urls.Post("/make", url.Make)
 		urls.Get("/{code}", url.Parse)
 	}
+
+	m := handlers.NewMockHandle()
+	mock := r.apricot.Party("/mock")
+	{
+		mock.Post("/make", m.Make)
+		mock.Any("/{route:path}", m.Parse)
+	}
 }

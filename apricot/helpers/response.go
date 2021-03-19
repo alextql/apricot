@@ -1,6 +1,8 @@
 package helpers
 
 import (
+	"fmt"
+
 	"github.com/kataras/iris/v12"
 )
 
@@ -35,4 +37,8 @@ func (r *Response) Success(data interface{}) {
 		"status":  "ok",
 		"data":    data,
 	})
+}
+
+func (r *Response) Raw(format string, args ...interface{}) {
+	r.iris.Text(fmt.Sprintf(format, args...))
 }
